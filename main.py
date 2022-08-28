@@ -47,12 +47,6 @@ def gen_frames(imagePath):
               return "No Face Detected"
     
 
-
-@app.route('/video_feed')
-def video_feed():
-    return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
-
-
 @app.route('/image_emotion', methods=['POST', 'GET'])
 def image_emotion():
     imagePath = request.json['imagePath']
