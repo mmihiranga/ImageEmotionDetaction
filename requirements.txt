@@ -24,7 +24,6 @@ itsdangerous==2.1.2
 Jinja2==3.1.2
 keras==2.9.0
 keras-models==0.0.7
-Keras-Preprocessing==1.1.2
 langcodes==3.3.0
 libclang==14.0.6
 Markdown==3.4.1
