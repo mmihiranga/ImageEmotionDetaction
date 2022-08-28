@@ -25,7 +25,6 @@ def gen_frames(imagePath):
             gray_img= cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)  
         
             faces_detected = face_haar_cascade.detectMultiScale(gray_img, 1.32, 5)  
-            print(len(faces_detected)>0)
             if(len(faces_detected)>0):
 
               for (x,y,w,h) in faces_detected:
