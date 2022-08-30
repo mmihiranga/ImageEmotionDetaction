@@ -7,12 +7,15 @@ import cv2
 import numpy as np
 import urllib.request
 
+app=Flask(__name__)
+CORS(app, support_credentials=True)
+
 face_haar_cascade = cv2.CascadeClassifier('./haarcascade_frontalface_default.xml')
 model = load_model('./Emotion_Detection.h5')
 class_labels = ['Angry', 'Happy', 'Neutral', 'Sad', 'Surprise']
 
 camera = cv2.VideoCapture(0)
-app=Flask(__name__)
+
 
 
 
@@ -65,7 +68,6 @@ def index():
     return jsonify({'Hello': "Image!"})
 
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, threaded=True, use_reloader=False)      
-
+if __name__ =='__main__':
+    app.run(debug=True)
 
