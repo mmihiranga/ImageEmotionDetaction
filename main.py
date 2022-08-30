@@ -55,7 +55,7 @@ def image_emotion():
     else:
         pred = gen_frames(imagePath)
         if pred == None:
-            return jsonify({'Error': "Error !"})
+            return jsonify({'Error': "Error  !"})
         else:
             return jsonify({'Prediction': gen_frames(imagePath)})
 
